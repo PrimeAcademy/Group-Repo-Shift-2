@@ -5,7 +5,7 @@ var array = [ 'Erika Klein', 'Lisa Mabley', 'Suzanna Altman', 'Cari Tan', 'Joel 
 
 //shuffle array and take one random name
 var randomName = function() {
-  return shuffleArray(array).pop();
+  return shuffleArray(array)[0];
 };
 
 module.exports = randomName;

@@ -10,15 +10,8 @@ router.get("/", function(request, response) {
 });
 
 router.get("/all", function(resquest, response) {
-  users();
-  User.find({}, function(err, people){
-    if(err){
-      console.log(err);
-      response.sendStatus(500);
-    } else {
-      response.send(people);
-    }
-  })
+  response.send(users());
+
 })
 
 router.delete('/remove/:id', function(request, response){

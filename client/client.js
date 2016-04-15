@@ -11,11 +11,11 @@ app.controller('PeopleController', ['$scope', '$http', function($scope, $http){
     })
 
   }
-  $scope.removeUser = function(user) {
+  $scope.removeUser = function(user, index) {
     userId = user._id;
-    $http.delete('/remove/' +userId).then(function(response){
+    $http.delete('/remove/' + userId).then(function(response){
         console.log('deleted', user);
-        $scope.getPeople();
+    $scope.users.splice(index, 1);
     })
   }
 }]);

@@ -17,8 +17,8 @@ var nounList = ['Sandwich', 'Nerd', 'Monkey', 'Cowboy', 'Ninja', 'Pants',
 'Bro', 'Barricuda', 'Diet', 'Gamer', 'Pirate', 'Chihuaua'];
 
 var newTwitterHandle = function() {
-  var adjective = shuffle(adjectiveList).pop();
-  var noun = shuffle(nounList).pop();
+  var adjective = shuffle(adjectiveList)[0];
+  var noun = shuffle(nounList)[0];
 
   // Generate random twitterhandle
   return '@' + adjective + noun;

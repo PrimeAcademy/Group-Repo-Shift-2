@@ -10,18 +10,18 @@
   </head>
 
   <body ng-controller = "PeopleController">
-    <div>
+
       <button ng-click = "getPeople()">Get People</button>
       <!-- Functionality for accessing list -->
-      <div ng-repeat = "user in users">
-        <div class="user_data">
-          <p>Name: {{user.name}}</p>
-          <p>Age: {{user.age}}</p>
-          <p>Location: {{user.location}}</p>
-          <p>Birthplace: {{user.birthplace}}</p>
-          <p>Twitter: {{user.twitter}}</p>
-        </div>
-        <button ng-click="removeUser(user)">Remove</button>
+        <div ng-repeat = "user in users">
+          <div class="user_data">
+            <p>Name: {{user.name}}</p>
+            <p>Age: {{user.age}}</p>
+            <p>Location: {{user.location}}</p>
+            <p>Birthplace: {{user.birthplace}}</p>
+            <p>Twitter: {{user.twitter}}</p>
+          </div>
+        <button ng-click="removeUser(user, $index)">Remove</button>
       </div>
     </div>
 
