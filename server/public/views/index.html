@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="views/styles.css" />
   </head>
 
-  <body ng-controller = "PeopleController">
+  <body ng-controller = "PeopleController as people">
 
-      <button ng-click = "getPeople()">Get People</button>
+      <button ng-click = "getPeople()" ng-model="people.user">Get People</button>
       <!-- Functionality for accessing list -->
-        <div ng-repeat = "user in users">
+        <div ng-repeat = "user in people.users">
           <div class="user_data">
             <p>Name: {{user.name}}</p>
             <p>Age: {{user.age}}</p>
