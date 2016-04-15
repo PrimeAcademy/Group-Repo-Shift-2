@@ -9,7 +9,7 @@ router.get("/", function(request, response) {
   response.sendFile(path.join(__dirname, '../public/views/index.html'));
 });
 
-router.get("/all", function(resquest, response) {
+router.get("/all", function(request, response) {
   response.send(users());
 
 })
